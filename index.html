@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Sumas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Juego de Sumas</h1>
+        <div class="equation">
+            <div id="question" class="question">0 + 0 = ?</div>
+        </div>
+        <div class="symbols">
+            <div id="leftStars" class="stars"></div>
+            <div id="rightCircles" class="circles"></div>
+        </div>
+        <input type="number" id="answer" placeholder="Escribe tu respuesta">
+        <button id="submitAnswer">Enviar</button>
+        <div id="resultPopup" class="popup hidden">
+            <p id="resultText"></p>
+            <button id="closePopup">Cerrar</button>
+        </div>
+    </div>
+    <div id="finalPopup" class="popup hidden">
+        <p id="finalResult"></p>
+        <button id="restartGame">Reiniciar Juego</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

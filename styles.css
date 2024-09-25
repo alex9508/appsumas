@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffccff, #ff99cc, #ff66ff, #ff99ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    height: 90vh; /* Ocupa gran parte de la pantalla */
+}
+
+.equation {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 2rem;
+}
+
+.symbols {
+    display: flex;
+    flex-direction: column; /* Cambiamos para alinear en columnas */
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.stars, .circles {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; /* Añadimos margen entre filas */
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff66cc;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 100px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultPopup p {
+    font-size: 1.2rem;
+}
+
+#resultPopup {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+#finalPopup {
+    background-color: #f0f8ff;
+    z-index: 20;
+}
