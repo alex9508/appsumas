@@ -27,6 +27,8 @@ function generateSum() {
     currentSum = num1 + num2;
     questionEl.textContent = `${num1} + ${num2} = ?`;
     displayStarsAndCircles(num1, num2);
+    answerEl.value = ''; // Limpiar el campo de respuesta
+    toggleSubmitButton(); // Actualizar estado del botón
 }
 
 function displayStarsAndCircles(num1, num2) {
@@ -38,6 +40,10 @@ function displayStarsAndCircles(num1, num2) {
     for (let i = 0; i < num2; i++) {
         rightCircles.innerHTML += '🦄'; // Círculos negros
     }
+}
+
+function toggleSubmitButton() {
+    submitAnswerBtn.disabled = answerEl.value.trim() === '';
 }
 
 submitAnswerBtn.addEventListener('click', () => {
@@ -84,4 +90,8 @@ restartGameBtn.addEventListener('click', () => {
     generateSum();
 });
 
+// Verificar el estado del botón al cambiar el input
+answerEl.addEventListener('input', toggleSubmitButton);
+
+// Iniciar el juego
 generateSum();
