@@ -60,6 +60,12 @@ body {
     justify-content: center;
     margin: 10px 0; /* Añadimos margen entre filas */
     width: 100%;
+    user-select: none;      /* Evita la selección de texto */
+    pointer-events: none;   /* Deshabilita todos los eventos de clic o interacción */
+    -webkit-touch-callout: none;  /* Evita el menú contextual en móviles */
+    -webkit-user-select: none;    /* Evita selección en Webkit (Chrome, Safari) */
+    -moz-user-select: none;       /* Evita selección en Firefox */
+    -ms-user-select: none;        /* Evita selección en IE/Edge */
 }
 
 button {
